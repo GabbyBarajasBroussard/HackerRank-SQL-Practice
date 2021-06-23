@@ -54,3 +54,10 @@ SUBSTR(city,1,1) NOT IN ('A','E','I','O','U') OR SUBSTR(city,-1,1) NOT IN ('a','
 
 SELECT DISTINCT City FROM Station
 WHERE REGEXP_LIKE(City, '^[^AEIOU]|[^aeiou]$');
+
+
+####################################################################################################################################################################
+
+SELECT name FROM students
+WHERE marks > 75
+ORDER BY SUBSTRING(NAME, -3), ID ASC;
